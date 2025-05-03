@@ -178,8 +178,8 @@ public:
 
 
     // Get dimensions
-    size_t rows() const { return rows; }
-    size_t cols() const { return cols; }
+    size_t getRows() const { return rows; }
+    size_t getCols() const { return cols; }
 
     // Print matrix
     void print() const {
