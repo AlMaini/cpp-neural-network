@@ -1,3 +1,6 @@
+#ifndef MATRIX_HPP
+#define MATRIX_HPP
+
 #include <vector>
 #include <iostream>
 #include <stdexcept>
@@ -201,3 +204,5 @@ public:
 Matrix operator*(double scalar, const Matrix& mat) {
     return mat * scalar;
 }
+
+#endif // MATRIX_HPP

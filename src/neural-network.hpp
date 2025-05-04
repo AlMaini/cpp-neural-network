@@ -1,5 +1,5 @@
-#ifndef NEURAL_NETWORK_HPP
-#define NEURAL_NETWORK_HPP
+#ifndef NEURAL_NETWORK
+#define NEURAL_NETWORK
 
 #include "matrix.hpp"
 #include <vector>
@@ -27,8 +27,9 @@ public:
      * @param layer_sizes Vector containing the number of neurons in each layer
      * @param lr Learning rate for training (default 0.01)
      */
-    NeuralNetwork(std::vector<size_t> layer_sizes, double lr = 0.01) 
-        : learning_rate(lr) {
+    NeuralNetwork(std::vector<size_t> layer_sizes, double lr = 0.01) {
+        // Both of these can be set through the initializer list for future speedup
+        learning_rate = lr;
         layers = layer_sizes;
         
         // Initialize weights and biases for each layer connection
@@ -156,4 +157,4 @@ public:
     void setLearningRate(double lr) { learning_rate = lr; }
 };
 
-#endif // NEURAL_NETWORK_HPP
+#endif // NEURAL_NETWORK
