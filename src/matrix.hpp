@@ -21,10 +21,9 @@ public:
     // Constructor: resizes the matrix to r rows and c columns, initializes all elements to initVal
     // If initVal is not provided, defaults to 0.0
     Matrix(size_t r, size_t c, double initVal = 0.0) : rows(r), cols(c) {
-        data.resize(rows);
-        for (size_t i = 0; i < rows; i++) {
-            data[i].resize(cols, initVal);
-        }
+        std::vector<double> row(cols, initVal);
+        std::vector<std::vector<double>> temp(rows, row);
+        data = temp;
     }
 
     // Copy constructor: creates a new matrix as a copy of another matrix

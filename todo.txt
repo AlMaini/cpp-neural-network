@@ -1,0 +1,9 @@
+PRIORITY: SPEED. it's currently way too slow for something this simple. Culprits are likely
+the way matrices are implemented and csv_reading.
+
+1. optimize csv reading
+2. optimize matrix creation (resizing is NOT it)
+3. more complex performance statistics (precision, recall, f1-score, etc.)
+4. more user friendly, allow custom architecures and datasets
+5. allow saving of weights and biases into file
+6. gui perhaps?
